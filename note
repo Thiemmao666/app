@@ -1,0 +1,46 @@
+Every 2.0s: kubectl get po -owide                                                                                                                                                                                                     stg-master01: Fri Nov  7 00:51:50 2025
+
+NAME                                                            READY   STATUS             RESTARTS        AGE     IP             NODE             NOMINATED NODE   READINESS GATES
+alertmanager-prometheus-kube-prometheus-alertmanager-0          2/2     Running            0               8h      10.244.8.15    stg-master01     <none>           <none>
+alloy-grafana-alloy-bgh2b                                       2/2     Running            0               8h      10.244.1.64    stg-master02     <none>           <none>
+grafana-6f567b5bb7-lf9jg                                        1/1     Running            0               9h      10.244.1.62    stg-master02     <none>           <none>
+prometheus-kube-prometheus-blackbox-exporter-5cc6d79b97-b76jt   1/1     Running            0               8h      10.244.8.13    stg-master01     <none>           <none>
+prometheus-kube-prometheus-operator-9fb49f49d-kp8nv             1/1     Running            0               8h      10.244.8.12    stg-master01     <none>           <none>
+prometheus-kube-state-metrics-76d687d756-dxlnp                  1/1     Running            0               8h      10.244.1.63    stg-master02     <none>           <none>
+prometheus-node-exporter-7cgbj                                  0/1     ImagePullBackOff   0               23h     172.17.1.241   stg-master03     <none>           <none>
+prometheus-node-exporter-84lv6                                  0/1     ImagePullBackOff   0               23h     172.17.0.209   a                <none>           <none>
+prometheus-node-exporter-8bzbh                                  1/1     Running            0               23h     172.17.0.197   stg-master02     <none>           <none>
+prometheus-node-exporter-97gq2                                  1/1     Running            0               23h     172.17.0.202   stg-master01     <none>           <none>
+prometheus-node-exporter-dvk5d                                  1/1     Running            0               23h     172.17.1.237   stg-master-eqm   <none>           <none>
+prometheus-node-exporter-p2925                                  0/1     ImagePullBackOff   0               23h     172.17.0.206   stg-main         <none>           <none>
+prometheus-node-exporter-ptfql                                  1/1     Running            0               23h     172.17.0.199   stg-worker02     <none>           <none>
+prometheus-node-exporter-s8lbp                                  0/1     ImagePullBackOff   0               23h     172.17.0.2     stg-worker01     <none>           <none>
+prometheus-node-exporter-tbzcr                                  1/1     Running            0               23h     172.17.0.201   stg-workermain   <none>           <none>
+prometheus-node-exporter-vvr5k                                  0/1     ImagePullBackOff   0               23h     172.17.1.242   stg-database02   <none>           <none>
+prometheus-prometheus-kube-prometheus-prometheus-0              2/2     Running            0               8h      10.244.8.17    stg-master01     <none>           <none>
+promtail-265mt                                                  0/1     ImagePullBackOff   0               8h      10.244.9.130   stg-main         <none>           <none>
+promtail-4tnwm                                                  0/1     ImagePullBackOff   0               8h      10.244.2.83    stg-master03     <none>           <none>
+promtail-5cnlm                                                  0/1     ImagePullBackOff   0               8h      10.244.6.26    stg-master-eqm   <none>           <none>
+promtail-8279p                                                  0/1     ImagePullBackOff   0               8h      10.244.0.33    a                <none>           <none>
+promtail-bmtks                                                  0/1     ImagePullBackOff   0               8h      10.244.5.173   stg-worker01     <none>           <none>
+promtail-brcvt                                                  1/1     Running            0               8h      10.244.1.69    stg-master02     <none>           <none>
+promtail-c2fxz                                                  0/1     ImagePullBackOff   0               8h      10.244.7.40    stg-workermain   <none>           <none>
+promtail-l94zt                                                  0/1     ImagePullBackOff   0               8h      10.244.4.191   stg-worker02     <none>           <none>
+promtail-nqs4r                                                  1/1     Running            0               8h      10.244.3.70    stg-database02   <none>           <none>
+promtail-rctqd                                                  1/1     Running            0               8h      10.244.8.18    stg-master01     <none>           <none>
+pyroscope-0                                                     1/1     Running            0               7h58m   10.244.1.70    stg-master02     <none>           <none>
+tempo-grafana-tempo-compactor-648958bf8-mrndc                   1/1     Running            0               56m     10.244.8.28    stg-master01     <none>           <none>
+tempo-grafana-tempo-distributor-7fbf8f95d9-rgwn2                1/1     Running            0               56m     10.244.1.81    stg-master02     <none>           <none>
+tempo-grafana-tempo-ingester-0                                  0/1     CrashLoopBackOff   11 (116s ago)   56m     10.244.1.83    stg-master02     <none>           <none>
+tempo-grafana-tempo-metrics-generator-0                         1/1     Running            0               56m     10.244.1.84    stg-master02     <none>           <none>
+tempo-grafana-tempo-querier-56b4df7dcd-45v5p                    1/1     Running            0               56m     10.244.8.26    stg-master01     <none>           <none>
+tempo-grafana-tempo-query-frontend-68cf7f65c4-g6gjw             1/1     Running            0               56m     10.244.8.27    stg-master01     <none>           <none>
+tempo-grafana-tempo-vulture-7db97c9cc6-8jhhm                    1/1     Running            0               56m     10.244.1.82    stg-master02     <none>           <none>
+tempo-memcached-896d46bb4-wvg42                                 0/1     ImagePullBackOff   0               7h10m   10.244.3.74    stg-database02   <none>           <none>
+
+
+
+https://grafana.com/docs/tempo/latest/
+
+
+
