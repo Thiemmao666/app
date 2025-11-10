@@ -43,4 +43,23 @@ tempo-memcached-896d46bb4-wvg42                                 0/1     ImagePul
 https://grafana.com/docs/tempo/latest/
 
 
+ts=2025-11-10T16:38:05.617228441Z caller=http.go:346 level=debug traceID=16f8eefc2869053f method=POST uri=/grpc.health.v1.Health/Check status=200 duration=1.088201ms request_body_size=5B request_body_read_duration=16.049µs msg="http request processed"
+ts=2025-11-10T16:38:05.618125915Z caller=http.go:346 level=debug traceID=4fa235552cd65445 tenant=0 method=POST uri=/grpc.health.v1.Health/Check status=200 duration=2.583657ms request_body_size=5B request_body_read_duration=16.088µs msg="http request processed"
+ts=2025-11-10T16:38:06.559886922Z caller=reporter.go:304 level=info msg="failed to send usage report" retries=4 err="Post \"https://stats.grafana.org/phlare-usage-report\": dial tcp: lookup stats.grafana.org on 10.96.0.10:53: server misbehaving"
+ts=2025-11-10T16:38:06.56015064Z caller=reporter.go:280 level=info msg="failed to report usage" err="5 errors: Post \"https://stats.grafana.org/phlare-usage-report\": dial tcp: lookup stats.grafana.org on 10.96.0.10:53: server misbehaving; Post \"https://stats.grafana.org/phlare-usage-report\": dial tcp: lookup stats.grafana.org on 10.96.0.10:53: server misbehaving; Post \"https://stats.grafana.org/phlare-usage-report\": dial tcp: lookup stats.grafana.org on 10.96.0.10:53: server misbehaving; Post \"https://stats.grafana.org/phlare-usage-report\": dial tcp: lookup stats.grafana.org on 10.96.0.10:53: server misbehaving; Post \"https://stats.grafana.org/phlare-usage-report\": dial tcp: lookup stats.grafana.org on 10.96.0.10:53: server misbehaving"
+ts=2025-11-10T16:38:09.397242602Z caller=frontend_scheduler_worker.go:360 level=debug component=frontend msg="stream context finished" err="context canceled"
+ts=2025-11-10T16:38:09.412470141Z caller=http.go:346 level=debug traceID=4d5052a3af047c2c method=POST uri=/schedulerpb.SchedulerForFrontend/FrontendLoop status=200 duration=20.901540737s request_body_size=23B request_body_read_duration=20.901072656s msg="http request processed"
+ts=2025-11-10T16:38:09.6476729Z caller=scheduler_processor.go:152 level=debug component=querier-worker msg="waiting for inflight queries to complete"
+ts=2025-11-10T16:38:09.647765843Z caller=scheduler_processor.go:163 level=debug component=querier-worker msg="refreshing scheduler connection"
+ts=2025-11-10T16:38:09.652298699Z caller=http.go:346 level=debug traceID=7e3aa5999ccfa8fd method=POST uri=/schedulerpb.SchedulerForQuerier/QuerierLoop status=200 duration=22.249949185s request_body_size=18B msg="http request processed"
+ts=2025-11-10T16:38:10.622658655Z caller=http.go:346 level=debug traceID=5721b88058bad0c3 tenant=0 method=POST uri=/grpc.health.v1.Health/Check status=200 duration=4.035688ms request_body_size=5B request_body_read_duration=239.946µs msg="http request processed"
+ts=2025-11-10T16:38:11.815045468Z caller=frontend_scheduler_worker.go:360 level=debug component=frontend msg="stream context finished" err="context canceled"
+ts=2025-11-10T16:38:11.816079843Z caller=http.go:346 level=debug traceID=409252638918afd8 method=POST uri=/schedulerpb.SchedulerForFrontend/FrontendLoop status=200 duration=19.224370896s request_body_size=23B request_body_read_duration=19.224182271s msg="http request processed"
+ts=2025-11-10T16:38:12.047126144Z caller=http.go:346 level=debug traceID=3aa30f54835ec747 method=GET uri=/ready status=200 duration=1.50168ms msg="http request processed"
+ts=2025-11-10T16:38:14.297428186Z caller=scheduler_processor.go:152 level=debug component=querier-worker msg="waiting for inflight queries to complete"
+ts=2025-11-10T16:38:14.29827492Z caller=scheduler_processor.go:163 level=debug component=querier-worker msg="refreshing scheduler connection"
+ts=2025-11-10T16:38:14.307683957Z caller=http.go:346 level=debug traceID=308861182a584a54 method=POST uri=/schedulerpb.SchedulerForQuerier/QuerierLoop status=200 duration=25.531632534s request_body_size=18B msg="http request processed"
+ts=2025-11-10T16:38:15.62772443Z caller=http.go:346 level=debug traceID=55e8459b6d43d310 tenant=0 method=POST uri=/grpc.health.v1.Health/Check status=200 duration=9.807688ms request_body_size=5B request_body_read_duration=365.536µs msg="http request processed"
+ts=2025-11-10T16:38:18.79592328Z caller=frontend_scheduler_worker.go:360 level=debug component=frontend msg="stream context finished" err="context canceled"
+ts=2025-11-10T16:38:18.797746169Z caller=http.go:346 level=debug traceID=195716589246cf0a method=POST uri=/schedulerpb.SchedulerForFrontend/FrontendLoop status=200 duration=23.839543294s request_body_size=23B request_body_read_duration=23.83901837s msg="http request processed"
 
