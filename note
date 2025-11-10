@@ -81,3 +81,12 @@ ts=2025-11-10T16:49:37.445919554Z level=info msg="rejoining peers" service=clust
 ts=2025-11-10T16:49:40.771896568Z level=warn msg="error sending batch, will retry" component_path=/ component_id=loki.write.endpoint component=client host=loki-gateway.monitoring.svc.cluster.local:80 status=-1 tenant=local error="Post \"http://loki-gateway.monitoring.svc.cluster.local:80/loki/api/v1/push\": dial tcp: lookup loki-gateway.monitoring.svc.cluster.local on 10.96.0.10:53: no such host"
 ts=2025-11-10T16:50:11.277079818Z level=warn msg="tailer stopped; will retry" target=test-molo/prometheus-node-exporter-s8lbp:node-exporter component_path=/ component_id=loki.source.kubernetes.pods err="container \"node-exporter\" in pod \"prometheus-node-exporter-s8lbp\" is waiting to start: trying and failing to pull image"
 ts=2025-11-10T16:50:29.806804929Z level=warn msg="error sending batch, will retry" component_path=/ component_id=loki.write.endpoint component=client host=loki-gateway.monitoring.svc.cluster.local:80 status=-1 tenant=local error="Post \"http://loki-gateway.monitoring.svc.cluster.local:80/loki/api/v1/push\": dial tcp: lookup loki-gateway.monitoring.svc.cluster.local on 10.96.0.10:53: no such host"
+
+
+
+a@stg-master01:~/app-main/appapp-appyaml/pyroscope$ kl alloy-grafana-alloy-7 |grep pyroscope
+Defaulted container "alloy" out of: alloy, config-reloader, fix-tmp-permissions (init)
+ts=2025-11-10T16:36:05.304766884Z level=info msg="finished node evaluation" controller_path=/ controller_id="" trace_id=ce5d6053dc6335a4856f00b4415fa603 node_id=pyroscope.write.local duration=1.110928ms
+ts=2025-11-10T16:36:05.470508861Z level=info msg="finished node evaluation" controller_path=/ controller_id="" trace_id=ce5d6053dc6335a4856f00b4415fa603 node_id=pyroscope.java.java duration=164.820676ms
+ts=2025-11-10T16:36:10.618188813Z level=info msg="tailer running" target=test-molo/pyroscope-0:pyroscope component_path=/ component_id=loki.source.kubernetes.pods
+ts=2025-11-10T16:36:14.376372597Z level=info msg="opened log stream" target=test-molo/pyroscope-0:pyroscope component_path=/ component_id=loki.source.kubernetes.pods "start time"=1970-01-01T00:00:00.000Z
