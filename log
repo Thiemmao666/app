@@ -1,0 +1,30 @@
+   Mounts:
+      /opt/bitnami/grafana-alloy/config from config (rw)
+  Volumes:
+   config:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  alloy2-grafana-alloy
+    Optional:    false
+   varlog:
+    Type:          HostPath (bare host directory volume)
+    Path:          /var/log
+    HostPathType:  
+   dockercontainers:
+    Type:          HostPath (bare host directory volume)
+    Path:          /var/lib/docker/containers
+    HostPathType:  
+   empty-dir:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+   empty-dir:
+    Type:          EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:        
+    SizeLimit:     <unset>
+  Node-Selectors:  <none>
+  Tolerations:     node-role.kubernetes.io/control-plane:NoSchedule op=Exists
+Volume Claims:     <none>
+Events:
+  Type     Reason        Age                From                    Message
+  ----     ------        ----               ----                    -------
+  Warning  FailedCreate  4s (x12 over 14s)  statefulset-controller  create Pod alloy2-grafana-alloy-0 in StatefulSet alloy2-grafana-alloy failed error: Pod "alloy2-grafana-alloy-0" is invalid: spec.volumes[4].name: Duplicate value: "empty-dir"
