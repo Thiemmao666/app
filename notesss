@@ -1,0 +1,26 @@
+a@stg-master01:~$ kg svc
+NAME                                           TYPE        CLUSTER-IP       EXTERNAL-IP      PORT(S)                                 AGE
+alertmanager-operated                          ClusterIP   None             <none>           9093/TCP,9094/TCP,9094/UDP              4d1h
+alloy-grafana-alloy                            ClusterIP   10.106.178.79    <none>           80/TCP                                  3h13m
+alloy-grafana-alloy-cluster                    ClusterIP   None             <none>           8080/TCP                                3h13m
+grafana                                        ClusterIP   10.100.62.230    107.113.53.128   8888/TCP                                4d1h
+prometheus-kube-prometheus-alertmanager        ClusterIP   10.102.203.172   <none>           9093/TCP                                4d16h
+prometheus-kube-prometheus-blackbox-exporter   ClusterIP   10.109.195.225   <none>           19115/TCP                               4d16h
+prometheus-kube-prometheus-operator            ClusterIP   10.97.227.107    <none>           9999/TCP                                4d16h
+prometheus-kube-prometheus-prometheus          ClusterIP   10.103.37.234    <none>           9090/TCP                                4d16h
+prometheus-kube-state-metrics                  ClusterIP   10.96.76.106     <none>           8080/TCP                                4d16h
+prometheus-node-exporter                       ClusterIP   10.110.178.181   <none>           10100/TCP                               4d16h
+prometheus-operated                            ClusterIP   None             <none>           9090/TCP                                4d1h
+pyroscope                                      ClusterIP   10.107.40.34     <none>           4040/TCP                                4d1h
+pyroscope-headless                             ClusterIP   None             <none>           4040/TCP                                4d1h
+pyroscope-memberlist                           ClusterIP   None             <none>           7946/TCP                                4d1h
+tempo-grafana-tempo-compactor                  ClusterIP   10.97.3.182      <none>           3200/TCP,9095/TCP                       4d
+tempo-grafana-tempo-distributor                ClusterIP   10.102.178.52    <none>           3200/TCP,9095/TCP,14268/TCP,14250/TCP   4d
+tempo-grafana-tempo-gossip-ring                ClusterIP   None             <none>           7946/TCP                                4d
+tempo-grafana-tempo-ingester                   ClusterIP   10.96.119.81     <none>           3200/TCP,9095/TCP                       4d
+tempo-grafana-tempo-metrics-generator          ClusterIP   10.105.139.155   <none>           3200/TCP,9095/TCP                       4d
+tempo-grafana-tempo-querier                    ClusterIP   10.97.92.233     <none>           3200/TCP,9095/TCP                       4d
+tempo-grafana-tempo-query-frontend             ClusterIP   10.98.178.115    <none>           3200/TCP,9095/TCP                       4d
+tempo-grafana-tempo-query-frontend-headless    ClusterIP   None             <none>           3200/TCP,9095/TCP                       4d
+tempo-grafana-tempo-vulture                    ClusterIP   10.102.13.202    <none>           3200/TCP                                4d
+tempo-memcached                                ClusterIP   10.105.194.42    <none>           11211/TCP                               4d
