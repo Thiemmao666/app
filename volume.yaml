@@ -1,0 +1,42 @@
+
+values
+
+alloy 
+  persistence:
+    enabled: false
+    mountPath: /bitnami/alertmanager/data
+    subPath: ""
+    storageClass: ""
+    accessModes:
+      - ReadWriteOnce
+    ## @param alertmanager.persistence.size PVC Storage Request for Concourse worker volume
+    ##
+    size: 8Gi
+    ## @param alertmanager.persistence.annotations Annotations for the PVC
+    ##
+    annotations: {}
+    ## @param alertmanager.persistence.selector Selector to match an existing Persistent Volume (this value is evaluated as a template)
+    ## selector:
+    ##   matchLabels:
+    ##     app: my-app
+    ##
+    selector: {}
+              
+ volumeMounts:              
+              mountPath: {{ .Values.server.persistence.mountPath }}
+          {{- if .Values.server.extraVolumeMounts }}
+          {{- include "common.tplvalues.render" (dict "value" .Values.server.extraVolumeMounts "context" $) | nindent 12 }}
+          {{- end }}
+
+
+
+      volumes:          
+        {{- if .Values.server.persistence.enabled }}
+          persistentVolumeClaim:
+            claimName: {{ default (include "prometheus.server.fullname" .) .Values.server.persistence.existingClaim }}
+        {{- else }}
+          emptyDir: {}
+        {{- end }}
+        {{- if .Values.server.extraVolumes }}
+        {{- include "common.tplvalues.render" (dict "value" .Values.server.extraVolumes "context" $) | nindent 8 }}
+        {{- end }}
