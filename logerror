@@ -12,3 +12,9 @@ ts=2025-11-17T03:26:19.520167786Z level=info msg="rejoining peers" service=clust
 ts=2025-11-17T03:26:21.233832079Z level=info msg="failed to send usage report" retries=1 err="Post \"https://stats.grafana.org/alloy-usage-report\": dial tcp: lookup stats.grafana.org on 10.96.0.10:53: server misbehaving"
 ts=2025-11-17T03:26:24.675224897Z level=info msg="failed to send usage report" retries=2 err="Post \"https://stats.grafana.org/alloy-usage-report\": dial tcp: lookup stats.grafana.org on 10.96.0.10:53: server misbehaving"
 ts=2025-11-17T03:26:30.664904067Z level=info msg="failed to send usage report" retries=3 err="Post \"https://stats.grafana.org/alloy-usage-report\": dial tcp: lookup stats.grafana.org on 10.96.0.10:53: server misbehaving
+
+
+ts=2025-11-17T03:20:19.304833852Z level=error msg="check stale pids" component_path=/ component_id=pyroscope.ebpf.instance err="map batch lookup: map batch api not supported (requires >= v5.6)"
+ts=2025-11-17T03:22:49.305675201Z level=error msg="check stale pids" component_path=/ component_id=pyroscope.ebpf.instance err="map batch lookup: map batch api not supported (requires >= v5.6)"
+ts=2025-11-17T03:25:19.304389915Z level=error msg="check stale pids" component_path=/ component_id=pyroscope.ebpf.instance err="map batch lookup: map batch api not supported (requires >= v5.6)"
+ts=2025-11-17T03:27:49.304574386Z level=error msg="check stale pids" component_path=/ component_id=pyroscope.ebpf.instance err="map batch lookup: map batch api not supported (requires >= v5.6)
