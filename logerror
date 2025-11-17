@@ -13,8 +13,37 @@ ts=2025-11-17T03:26:21.233832079Z level=info msg="failed to send usage report" r
 ts=2025-11-17T03:26:24.675224897Z level=info msg="failed to send usage report" retries=2 err="Post \"https://stats.grafana.org/alloy-usage-report\": dial tcp: lookup stats.grafana.org on 10.96.0.10:53: server misbehaving"
 ts=2025-11-17T03:26:30.664904067Z level=info msg="failed to send usage report" retries=3 err="Post \"https://stats.grafana.org/alloy-usage-report\": dial tcp: lookup stats.grafana.org on 10.96.0.10:53: server misbehaving
 
-
-ts=2025-11-17T03:20:19.304833852Z level=error msg="check stale pids" component_path=/ component_id=pyroscope.ebpf.instance err="map batch lookup: map batch api not supported (requires >= v5.6)"
-ts=2025-11-17T03:22:49.305675201Z level=error msg="check stale pids" component_path=/ component_id=pyroscope.ebpf.instance err="map batch lookup: map batch api not supported (requires >= v5.6)"
-ts=2025-11-17T03:25:19.304389915Z level=error msg="check stale pids" component_path=/ component_id=pyroscope.ebpf.instance err="map batch lookup: map batch api not supported (requires >= v5.6)"
-ts=2025-11-17T03:27:49.304574386Z level=error msg="check stale pids" component_path=/ component_id=pyroscope.ebpf.instance err="map batch lookup: map batch api not supported (requires >= v5.6)
+# Please edit the object below. Lines beginning with a '#' will be ignored,
+# and an empty file will abort the edit. If an error occurs while saving this file will be
+# reopened with the relevant failures.
+#
+apiVersion: v1
+data:
+  Corefile: |
+    .:53 {
+        errors
+        health {
+           lameduck 5s
+        }
+        ready
+        kubernetes cluster.local in-addr.arpa ip6.arpa {
+           pods insecure
+           fallthrough in-addr.arpa ip6.arpa
+           ttl 30
+        }
+        prometheus :9153
+        forward . /etc/resolv.conf {
+           max_concurrent 1000
+        }
+        cache 30
+        loop
+        reload
+        loadbalance
+    }
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2025-10-05T06:36:50Z"
+  name: coredns
+  namespace: kube-system
+  resourceVersion: "225"
+  uid: 5fdda2c5-2b70-4b0c-aea4-7de3f260948f
