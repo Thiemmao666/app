@@ -47,3 +47,9 @@ metadata:
   namespace: kube-system
   resourceVersion: "225"
   uid: 5fdda2c5-2b70-4b0c-aea4-7de3f260948f
+
+
+nameserver 127.0.0.53
+options edns0 trust-ad
+search openstacklocal
+
