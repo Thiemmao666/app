@@ -1,0 +1,3 @@
+etc.\\n\" ws: false; Accept: */*; Connection: close; User-Agent: kube-probe/1.30; "
+level=warn ts=2025-11-19T10:17:48.597957787Z caller=logging.go:126 msg="GET /ready (500) 78.265µs Response: \"Not ready: Unable to find any logs to tail. Please verify permissions, volumes, scrape_config, etc.\\n\" ws: false; Accept: */*; Connection: close; User-Agent: kube-probe/1.30; "
+level=warn ts=2025-11-19T10:17:58.597348492Z caller=logging.go:126 msg="GET /ready (500) 83.294µs Response: \"Not ready: Unable to find any logs to tail. Please verify permissions, volumes, scrape_config, etc.\\n\" ws: false; Accept: */*; Connection: close; User-Agent: kube-probe/1.30; "
