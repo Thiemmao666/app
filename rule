@@ -1,0 +1,15 @@
+- alert: WarningpodMemory
+              expr: max(container_memory_rss{ namespace=~"mcc", image!=""}) by (instance, namespace, pod) >= 6979321856
+              for: 10m
+              labels:
+                severity: warning
+              annotations:
+                description: Pod {{ "{{" }} $labels.pod }} in namespace {{ "{{" }} $labels.namespace }} qua 80% ram mac dinh trong 10 minutes: http://grafana.mcc.svmcdevops.com/d/k8s_views_nodes/24-7-server>
+
+            - alert: CriticalpodMemory
+              expr: max(container_memory_rss{ namespace=~"mcc", image!=""}) by (instance, namespace, pod) >= 8589934592
+              for: 3m
+              labels:
+                severity: critical
+              annotations:
+                description: "Pod {{ "{{" }} $labels.pod }} in namespace {{ "{{" }} $labels.namespace }} qua 95% ram mac dinh trong 3 minutes: http://grafana.mcc.svmcdevops.com/d/k8s_views_nodes/24-7-serve>
