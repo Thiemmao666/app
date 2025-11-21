@@ -1,15 +1,12 @@
-Error: /opt/bitnami/grafana-alloy/config/config.alloy:58:3: unrecognized attribute name "tenant_id"
-
-57 |   }
-58 |   tenant_id = "local"
-   |   ^^^^^^^^^^^^^^^^^^^
-59 | }
-
-Error: /opt/bitnami/grafana-alloy/config/config.alloy:50:3: unrecognized attribute name "start_at"
+ts=2025-11-21T04:33:24.507115489Z level=info msg="finished complete graph evaluation" controller_path=/ controller_id="" trace_id=36bcba5363bcb4f93d5046c6ff17a41b duration=97.829857ms
+Error: /opt/bitnami/grafana-alloy/config/config.alloy:50:3: unrecognized attribute name "start_position"
 
 49 |   forward_to = [loki.write.loki_endpoint.receiver]
-50 |   start_at = "end"
-   |   ^^^^^^^^^^^^^^^^
-51 |   read_from = "tail"
+50 |   start_position = "end"
+   |   ^^^^^^^^^^^^^^^^^^^^^^
+51 | }
+
 interrupt received
-ts=2025-11-21T04:26:38.64210545Z level=error msg="failed to start reporter" err="context canceled"
+ts=2025-11-21T04:33:24.507517191Z level=error msg="failed to start reporter" err="context canceled"
+ts=2025-11-21T04:33:24.508442136Z level=error msg="failed to evaluate config" controller_path=/ controller_id="" node=loki.source.kubernetes.all_pods err="decoding configuration: /opt/bitnami/grafana-alloy/config/config.alloy:50:3: unrecognized attribute name \"start_position\""
+Error: could not perform the initial load successfully
